@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalculadoraPropina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="card">
+        <div class="card__flex">
+          <div class="card__cuentas">
+            <div class="card__cuenta">
+              <div class="card__cuenta__input">
+                <label class="cuenta__label" for="cuenta">Cuenta</label>
+                <input
+                  type="number"
+                  id="cuenta"
+                  class="cuenta__input"
+                  min="0"
+                />
+              </div>
+            </div>
+
+            <div class="card__propina">
+              <p>Seleccione la cantidad de propina</p>
+              <div class="card__propina__botones">
+                <div class="card__propina__boton">
+                  <button class="btn-prop" id="5per">5%</button>
+                </div>
+                <div class="card__propina__boton">
+                  <button class="btn-prop" id="10per">10%</button>
+                </div>
+                <div class="card__propina__boton">
+                  <button class="btn-prop btn__selected" id="15per">15%</button>
+                </div>
+                <div class="card__propina__boton">
+                  <button class="btn-prop" id="25per">25%</button>
+                </div>
+                <div class="card__propina__boton">
+                  <button class="btn-prop" id="50per">50%</button>
+                </div>
+                <div class="card__propina__boton">
+                  <input
+                    type="number"
+                    id="custom"
+                    class="btn-prop"
+                    placeholder="Custom"
+                    min="0"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__resultados">
+            <div class="propina">
+              <p class="propina__titulo">Propina</p>
+              <p class="propina__total">$0.00</p>
+            </div>
+
+            <div class="total">
+              <p class="total__titulo">Total</p>
+              <p class="total__total">$0.00</p>
+            </div>
+
+            <input type="submit" class="reset" value="Reset" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

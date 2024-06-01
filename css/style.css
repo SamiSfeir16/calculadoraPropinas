@@ -1,0 +1,224 @@
+:root {
+  --main-bg-color: hsl(185, 41%, 84%);
+  --hover--and--btn-color: hsl(172, 67%, 45%);
+  --primary--color: hsl(183, 100%, 15%);
+  --subTitle--color: hsl(186, 14%, 43%);
+  --inputs--bg-color: hsl(189, 41%, 97%);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Space Mono", monospace;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  background-color: var(--main-bg-color);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 65%;
+    padding: 2rem;
+  }
+}
+
+.card__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .card__flex {
+    flex-direction: row;
+  }
+}
+
+.card__cuentas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cuenta__label {
+  color: var(--subTitle--color);
+  font-weight: 600;
+}
+
+.cuenta__input {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--inputs--bg-color);
+  color: #00494d;
+  padding: 1.5rem 1rem;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.card__propina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__propina p {
+  color: var(--subTitle--color);
+  font-weight: 600;
+}
+
+.card__propina__botones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .card__propina__botones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card__propina__boton {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .card__propina__boton {
+    max-width: 15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card__propina__boton {
+    max-width: 13rem;
+  }
+}
+.btn-prop {
+  all: unset;
+  background-color: var(--primary--color);
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.3rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn-prop:hover {
+  background-color: var(--main-bg-color);
+  color: var(--primary--color);
+  cursor: pointer;
+}
+
+#custom {
+  background-color: var(--main-bg-color);
+  text-align: right;
+  color: var(--subTitle--color);
+}
+
+#custom:hover {
+  cursor: text;
+}
+
+#custom::placeholder {
+  font-size: 1.9rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.btn__selected {
+  background-color: var(--hover--and--btn-color);
+  color: var(--primary--color);
+}
+
+.card__resultados {
+  background-color: var(--primary--color);
+  padding: 2rem 2.5rem;
+  flex: 2;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .card__resultados {
+    padding: 2rem 3rem;
+  }
+}
+
+.propina,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.propina__titulo,
+.total__titulo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.propina__total,
+.total__total {
+  color: var(--hover--and--btn-color);
+  font-weight: bold;
+  font-size: 2.3rem;
+}
+
+@media (min-width: 768px) {
+  .propina__total,
+  .total__total {
+    font-size: 2.5rem;
+  }
+}
+
+.reset {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--hover--and--btn-color);
+  color: var(--primary--color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.5s;
+}
+
+.reset:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
